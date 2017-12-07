@@ -54,4 +54,4 @@ var app = new Vue({
       usersRef.child(user['.key']).remove()
     }
   }
-})
+});

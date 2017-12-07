@@ -7,13 +7,20 @@
 
   <!-- CSS  -->
   <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vuefire/1.4.5/vuefire.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <script src="js/vue.js"></script>
-  <script src="js/axios.js"></script>
-  <script src="js/app.js"></script>
+ 
+ <style type="text/css">
+   .v-enter, .v-leave-active {
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+}
+ </style>
+
   
 </head>
 <body>
@@ -108,7 +115,7 @@
           <h4>Contact Us</h4>
           <p class="left-align light">
             <div id="app">
-              <ul is="transition-group">
+              <ul >
                 <li v-for="user in users" class="user" :key="user['.key']">
                   <span>{{user.name}} - {{user.email}}</span>
                   <button v-on:click="removeUser(user)">X</button>
@@ -124,6 +131,7 @@
                 <li v-show="!validation.email">Please provide a valid email address.</li>
               </ul>
             </div>
+     
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
         </div>
       </div>
@@ -185,5 +193,9 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
    <script src="js/toastr.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuefire/1.4.5/vuefire.js"></script>
+            <script src="js/app.js"></script>
   </body>
+
 </html>
