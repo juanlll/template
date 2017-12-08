@@ -16,18 +16,30 @@ var proyectosRef = firebase.database().ref('proyectos')
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-  document.getElementById("mensaje").innerHTML= "<li>"+user.email+"</li> ";
-   document.getElementById('oculto2').style.display = 'block';
+     toastr.info('Bienvenido '+user.email);
+  document.getElementById("btn_perfil").innerHTML= "<li style='color:white; font-style:bold;'>"+user.email+"</li> ";
+  document.getElementById("btn_perfil1").innerHTML= "<li style='color:white; font-style:bold;'>"+user.email+"</li> ";
+  document.getElementById('btn_salir').style.display = 'block';
+  document.getElementById('btn_salir1').style.display ='block';
+  document.getElementById('btn_login').style.display ='none';
+  document.getElementById('btn_login1').style.display ='none';
+  document.getElementById('oculto2').style.display = 'block';
+  document.getElementById('btn_eliminar').style.display = 'block';
 
  
   
 
   } else {
-    document.getElementById("mensaje").innerHTML= '<a class="white-text  modal-trigger" href="#modal1">Login</a>';
-    document.getElementById("mensaje1").innerHTML= '<a class="black-text  modal-trigger" href="#modal1">Login</a>';
-    document.getElementById('oculto').style.display = 'none';
-    document.getElementById('oculto1').style.display = 'none';
-    document.getElementById('oculto2').style.display = 'none';
+
+      document.getElementById("btn_perfil").innerHTML= "none";
+        document.getElementById("btn_perfil1").innerHTML= "none";
+        document.getElementById('btn_login').style.display ='block';
+       document.getElementById('btn_salir').style.display ='none';
+       document.getElementById('btn_salir1').style.display ='none';
+       document.getElementById('btn_login').style.display ='block';
+       document.getElementById('btn_login1').style.display ='block';
+       document.getElementById('oculto2').style.display = 'none';
+       document.getElementById('btn_eliminar').style.display = 'none';
 
 
   }
@@ -96,17 +108,19 @@ firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(e
     login: function(email,password){
       firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
   // Handle Errors here.
+
   var errorCode = error.code;
   var errorMessage = error.message;
+  toastr.error(error.message);
   console.log(error);
   // ...
 });
     },
     salir:function(){
       firebase.auth().signOut().then(function() {
- alert('Acabas de salir!');
+ toastr.info('Acabas de salir');
 }).catch(function(error) {
- alert('No haz podifo salir!');
+ toastr.error('Se se pudo salir!');
 });
     }
   }

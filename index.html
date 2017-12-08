@@ -20,16 +20,17 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo white-text" >Juan<img class="circle responsive-img" src="student.png" width="50px" >vv</a>
       <ul class="right hide-on-med-and-down white-text">
-        <li><a style="font-style: bold; color:white;" href="#services">Contacto</a></li>
-          <li><a style="font-style: bold; color:white;" id="mensaje"></a></li>
-       <li><a id="oculto"  style="font-style: bold; color:white;"  class='btn' @click=salir()>Salir</a></li>
+          <li><a style="font-style: bold; color:white;" href="#services">Contacto</a></li>
+          <li ><a id="btn_perfil"></a></li>
+          <li id="btn_login"> <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a></li>
+          <li id="btn_salir"><a  class='btn' @click=salir()>Salir</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a style="font-style: bold; color:white;" href="#services">Contacto</a></li>
-             <li><a style="font-style: bold; color:white;" id="mensaje1"></a></li>
-             <li><a id="oculto1" class='btn' @click=salir()>Salir</a></li>
-    
+            <li><a class="btn" href="#services">Contacto</a></li>
+             <li ><a id="btn_perfil1"></a></li>
+             <li id="btn_login1"> <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a></li>
+             <li id="btn_salir1"><a  class='btn' @click=salir()>Salir</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -61,35 +62,6 @@
     <!-- Modal Trigger -->
 
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-       <div id="app">
-        
-          
-              <ul class="errors">
-              
-                <li v-show="!validation.email">  <div class="chip white-text red">Por favor ingrese su dirección de correo electrónico válida.</div></li>
-                  <li v-show="!validation.name">  <div class="chip white-text red">La contraseña no puede estar vacío.</div></li>
-              </ul>
-              <form id="form" v-on:submit.prevent="addUser">
-                <label>Email</label>
-                <input type="email" v-model="newUser.email" placeholder="email@email.com">
-                <label>Contraseña</label>
-                <input type="text" v-model="newUser.name" placeholder="Contraseña">
-                
-                <input class="col l12 m12 s12 btn" type="submit" value="Add User">
-              </form>
-          
-              <button class="col l12 m12 s12  btn"  v-on:click="crear(newUser.email,newUser.name)">Crear</button>
-              <button class="col l12 m12 s12 btn"  v-on:click="login(newUser.email,newUser.name)">Login</button>
-            </div>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
 
     <div class="section" id="portafolio">
 
@@ -118,7 +90,7 @@
                <p>
                {{pro.description}}
              </p>
-       <button @click="eliminarProyecto(pro)">Eliminar</button>
+       <button id="btn_eliminar" @click="eliminarProyecto(pro)">Eliminar</button>
                </div>
            
     
@@ -207,6 +179,36 @@
     </div>
   </footer>
 
+
+
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+
+       <div id="app">
+        
+          
+            
+            
+                <label>Email</label>
+                <input type="email" v-model="newUser.email" placeholder="email@email.com">
+                <label>Contraseña</label>
+                <input type="password" v-model="newUser.name" placeholder="Contraseña">
+                
+           
+            <ul class="errors">
+    <li v-show="!validation.email">  <div class="chip white-text red">Por favor ingrese su dirección de correo electrónico válida.</div></li>
+    <li v-show="!validation.name">  <div class="chip white-text red">La contraseña no puede estar vacío.</div></li>
+              </ul>
+              <button class="col l12 m12 s12 btn"  v-on:click="login(newUser.email,newUser.name)">Login</button>
+            </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
