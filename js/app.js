@@ -24,6 +24,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   } else {
     document.getElementById("mensaje").innerHTML= '<a class="white-text  modal-trigger" href="#modal1">Login</a>';
+    document.getElementById("mensaje1").innerHTML= '<a class="white-text  modal-trigger" href="#modal1">Login</a>';
    document.getElementById('oculto').style.display = 'none';
      document.getElementById('oculto1').style.display = 'none';
        document.getElementById('oculto2').style.display = 'none';
