@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
      toastr.info('Bienvenido '+user.email);
   document.getElementById("btn_perfil").innerHTML= "<li style='color:white; font-style:bold;'>"+user.email+"</li> ";
-  document.getElementById("btn_perfil1").innerHTML= "<li style='color:white; font-style:bold;'>"+user.email+"</li> ";
+  document.getElementById("btn_perfil1").innerHTML= "<li style='color:black; font-style:bold;'>"+user.email+"</li> ";
   document.getElementById('btn_salir').style.display = 'block';
   document.getElementById('btn_salir1').style.display ='block';
   document.getElementById('btn_login').style.display ='none';
