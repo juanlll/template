@@ -3,7 +3,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <title>Desarrollador web</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,12 +14,14 @@
 <body>
   <nav  role="navigation" style="background-color: #242448;">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo white-text" >Juan<img class="circle responsive-img" src="student.png" width="50px" >vv</a>
+      <a id="logo-container" href="#" class="brand-logo white-text" style="font-family: 'Monoton', cursive;">Juan<img class="circle responsive-img" src="student.png" width="50px" >vv</a>
       <ul class="right hide-on-med-and-down white-text">
-          <li><a style="font-style: bold; color:white;" href="#services">Contacto</a></li>
-          <li ><a id="btn_perfil"></a></li>
-          <li id="btn_login"> <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a></li>
-          <li id="btn_salir"><a  class='btn' >Salir</a></li>
+        <li ><a href="#home" style="font-style: bold; color:white;">Inicio</a></li>
+          <li ><a href="#about" style="font-style: bold; color:white;">¿Quien soy?</a></li>
+          <li ><a href="#portafolio" style="font-style: bold; color:white;">Portafolio</a></li>
+          <li><a style="font-style: bold; color:white;" href="#contact">Contacto</a></li>
+          
+          
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
@@ -35,13 +38,13 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center white-text">JUAN VARGAS</h1>
+        <h1 class="header center white-text" style="font-family: 'Monoton', cursive;">JUAN VARGAS</h1>
         <div class="row center">
        
           <h5 class="header col s12 light">Desarrollador web con habilidades en tecnologias modernas.</h5>
         </div>
         <div class="row center">
-          <a  id="download-button" class="btn-large waves-effect waves-light purple darken-1" onclick="toastr.error('hola');">Contactar</a>
+          <a  id="download-button" class="btn-large waves-effect waves-light purple darken-1">Contactar</a>
         </div>
         <br><br>
 
@@ -52,28 +55,78 @@
 
 
   <div class="container">
-    <div class="section">
+    <div class="section" id="contact">
 
-      <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        </div>
+      </div>
 
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
+    </div>
+  </div>
+
+    <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+<h4 class="center"  style="font-family: 'Monoton', cursive;">QUIEN SOY?</h4>
+<br>
+      <!--   Icon Section   -->
+      <div class="row center">
+        <div class="col s12 m6 l6" id="information">
+          <img src="./2.jpg" class="circle" height="200" width="200">
+               <p class="light">
+                Soy un joven apasionado por las tecnologias modernas y me encantan los frameworks que estan en constante avance, mi frase favorita es "Nunca pares de aprender!".
+               </p>
         </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
+        <div class="col s12 m6 l6" id="habilidades">
+      
+      <div class="col s12 m12 l12">
+        <div class="card-panel">
+          <span class="white-text"><strong class="muted">Nombre:</strong> Juan Sebastian Vargas
+          </span>
+        </div>
+      </div>
+            
+               <div class="col s12 m12 l12">
+        <div class="card-panel">
+          <span class="white-text"><strong class="muted">Estudios:</strong> Ingenieria de Sistemas
+          </span>
+        </div>
+      </div>
 
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
+         <div class="col s12 m12 l12">
+        <div class="card-panel">
+          <span class="white-text"><strong class="muted">Enfoque:</strong> Desarrollo web
+          </span>
         </div>
 
+      </div>
+
+         <div class="col s12 m12 l12">
+        <div class="card-panel">
+          <span class="white-text"><strong class="muted">Edad:</strong> 22 años
+          </span>
+        </div>
+        
+      </div>
+
+         
+        </div>
+<!-- 
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
@@ -81,7 +134,7 @@
 
             <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
           </div>
-        </div>
+        </div> -->
       </div>
 
     </div>
@@ -100,12 +153,12 @@
   </div>
 
   <div class="container">
-    <div class="section">
+    <div class="section" id="contact">
 
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
+          <h4 style="font-family: 'Monoton', cursive;">CONTACTO</h4>
           <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
         </div>
       </div>
