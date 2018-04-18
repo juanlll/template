@@ -55,3 +55,16 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+#information p{
+color: #242448;
+font-size: 25px;
+}
+#information strong{
+color: #242448;
+font-size: 30px;
+}
+
+#habilidades .card-panel{
+  background-color: #242448;
+}
